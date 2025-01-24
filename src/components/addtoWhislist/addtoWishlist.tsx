@@ -31,8 +31,7 @@ function AddtoWishlist({ wishtlistItem}:addItem) {
           {isInWishlist ? (
             <Link href="/wishlist">
               <span className="flex items-center gap-1">
-                Wishlisted <WishlistHeart/>
-                
+                Wishlisted <WishlistHeart />
               </span>
             </Link>
           ) : (
@@ -50,11 +49,14 @@ function AddtoWishlist({ wishtlistItem}:addItem) {
           {isInWishlist ? (
             <Link href="/wishlist">
               <span className="sm:hidden flex flex-wrap gap-1 pr-1 items-center cursor-pointer ">
-                Wishlisted <BiSolidHeart className="size-4 text-[#cc0808]" />
+                Wishlisted <WishlistHeart />
               </span>
             </Link>
           ) : (
-            <span  onClick={handleClick} className="sm:hidden flex gap-1 items-center cursor-pointer ">
+            <span
+              onClick={handleClick}
+              className="sm:hidden flex gap-1 items-center cursor-pointer "
+            >
               <IoMdHeartEmpty className="size-3" />
               Add Whistlist
             </span>

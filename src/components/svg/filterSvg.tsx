@@ -4,7 +4,7 @@ import { BiFilterAlt } from "react-icons/bi";
 function FilterSvg() {
   return (
     <div className="px-5 flex justify-end pt-8">
-      <BiFilterAlt size={35} />
+      <BiFilterAlt size={32} />
     </div>
   );
 }
