@@ -26,8 +26,8 @@ function AddtoWishlist({ wishtlistItem}:addItem) {
 
   return (
     <section>
-      <div className="flex text-xs sm:text-sm items-center justify-between relative">
-        <div className=" sm:flex hidden gap-1 items-center cursor-pointer">
+      <div className="flex text-sm items-center justify-between relative">
+        <div className="sm:flex hidden gap-1 items-center cursor-pointer">
           {isInWishlist ? (
             <Link href="/wishlist">
               <span className="flex items-center gap-1">

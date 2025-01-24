@@ -15,7 +15,7 @@ orderItems[]{
  }`;
  const getOrders = await client.fetch(query)
  if(getOrders){
-return NextResponse.json(getOrders);
+return NextResponse.json(getOrders.reverse());
  }else{
 return NextResponse.json(null);  
  }

@@ -248,6 +248,36 @@ setName(decode.name)
           </div>
         </div>
       )}
+
+      <nav className="font-[500]  text-[15px] items-center pt-1 justify-center flex bg-white lg:hidden  gap-[15.38px] list-none">
+        <Link href="/allProducts" className="sm:block hidden">
+          <li>New & Featured</li>
+        </Link>
+        <Link href="/allProducts">
+          <li
+            className={` ${
+              path === "/cart" ? "border-b-[2px]  border-black" : ""
+            }`}
+          >
+            Men
+          </li>
+        </Link>
+        <Link href="/allProducts">
+          <li>Women</li>
+        </Link>
+
+        <Link href="/allProducts">
+          <li>Kids</li>
+        </Link>
+
+        <Link href="/allProducts" className="sm:block hidden">
+          <li>Sales</li>
+        </Link>
+
+        <Link href="/allProducts">
+          <li>SNKRS</li>
+        </Link>
+      </nav>
       <div
         onClick={() => setFilter(true)}
         className={`${path === "/allProducts" ? "" : "hidden "} md:hidden cursor-pointer bg-white`}

@@ -64,7 +64,7 @@ export default function WishList() {
                   <div className="font-[500] text-[#757575] space-y-0.5 text-[15px] mt-1.5">
                     <div className="line-clamp-1">{item.category}</div>
                     <div>{item.colors?.length} Colour </div>
-                    <div className="flex text-xs sm:text-sm tracking-wide items-center justify-between relative">
+                    <div className="flex text-sm tracking-wide items-center justify-between relative">
                       <span
                         onClick={() => removeFromWishlist(item._id)}
                         className="sm:flex hidden gap-1 items-center cursor-pointer"

@@ -20,7 +20,6 @@ export async function POST(req:NextRequest) {
     const orderId = event?.data?.object?.metadata?.orderId;
     const isPaid = event?.data?.object?.payment_status === "paid";
     if (isPaid) {
-
       await client.patch(orderId).set({ paid: true }).commit();
 
     }
