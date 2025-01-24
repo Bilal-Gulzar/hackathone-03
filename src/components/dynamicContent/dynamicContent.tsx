@@ -13,17 +13,7 @@ export default function DynamicContent({data}:content) {
     <section className="px-4 sm:ps-10 py-7 overflow-hidden">
       <div className="font-[500]  flex justify-between items-center pe-10 mb-5 ">
         <div className=" text-[22px]">Best of Air Max</div>
-        <div className="hidden sm:flex gap-3 items-center">
-          <div className="text-[15px]">Shop</div>
-          <div className="flex gap-3">
-            <div className="w-[48px] h-[48px] rounded-full bg-500 flex justify-center items-center">
-              <RigthArrowSvg />
-            </div>
-            <div className="w-[48px] h-[48px] rounded-full bg-500 flex justify-center items-center">
-              <LeftArrowSvg />
-            </div>
-          </div>
-        </div>
+       
       </div>
 
       <div className="flex flex-col sm:flex-row gap-6 sm:gap-4  items-center sm:overflow-x-auto hide-scrollbar ">

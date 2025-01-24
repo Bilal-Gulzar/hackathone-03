@@ -9,7 +9,7 @@ import DynamicContent from "@/components/dynamicContent/dynamicContent";
 import { client } from "@/sanity/lib/client";
 
 export default  async function Home() {
-const query = `*[_type == "product"][0...6]{
+const query = `*[_type == "product"][0...5]{
   productName,
   price,
   category,

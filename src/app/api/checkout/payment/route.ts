@@ -7,9 +7,7 @@ export const POST = async (req:NextRequest) => {
   try {
     const { shoppingCart, email, firstName,lastName, phone,postalCode , city, country, address } =
       await req.json();
-    console.log(shoppingCart, email,firstName,lastName,phone,postalCode , city, country, address)
-   shoppingCart
-let name = firstName+ " "+lastName
+    let name = firstName+ " "+lastName
     const orderDoc = await client.create({
       _type: "order",
       customerEmail: email,
@@ -67,7 +65,6 @@ let name = firstName+ " "+lastName
       let updatedData = {
         totalAmount: Subtotal,
       };
-      console.log(orderDoc)
      await client.patch(documentId).set(updatedData).commit();
     const stripeSession = await stripe.checkout.sessions.create({
       line_items: stripLineItems,

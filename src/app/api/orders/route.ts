@@ -5,7 +5,7 @@ export const GET = async (req:NextRequest)=>{
 try{
 const url = new URL(req.url)
 const session =  url.searchParams.get('email')
-const query = `*[_type == "order" && _id  == "j9x2C1MXzEn1Hzo4Lb4XN8" 
+const query = `*[_type == "order" && customerEmail  == "${session}" 
  ]{
 ...,
 orderItems[]{
