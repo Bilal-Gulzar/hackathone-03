@@ -1,0 +1,28 @@
+
+    [
+    { "city": "Karachi", "postal_code": "74400" },
+    { "city": "Lahore", "postal_code": "54000" },
+    { "city": "Islamabad", "postal_code": "44000" },
+    { "city": "Rawalpindi", "postal_code": "46000" },
+    { "city": "Faisalabad", "postal_code": "38000" },
+    { "city": "Multan", "postal_code": "60000" },
+    { "city": "Peshawar", "postal_code": "25000" },
+    { "city": "Quetta", "postal_code": "87300" },
+    { "city": "Sialkot", "postal_code": "51310" },
+    { "city": "Gujranwala", "postal_code": "52250" },
+    { "city": "Sukkur", "postal_code": "65200" },
+    { "city": "Bahawalpur", "postal_code": "63100" },
+    { "city": "Muzaffarabad", "postal_code": "13100" },
+    { "city": "Hyderabad", "postal_code": "71000" },
+    { "city": "Mardan", "postal_code": "23200" },
+    { "city": "Chiniot", "postal_code": "39350" },
+    { "city": "Dera Ghazi Khan", "postal_code": "32200" },
+    { "city": "Jhelum", "postal_code": "49600" },
+    { "city": "Sheikhupura", "postal_code": "39350" },
+    { "city": "Gujrat", "postal_code": "50700" },
+    { "city": "Tando Adam", "postal_code": "71150" },
+    { "city": "Khushab", "postal_code": "39400" },
+    { "city": "Larkana", "postal_code": "77150" },
+    { "city": "Okara", "postal_code": "39350" },
+    { "city": "Mirpur Khas", "postal_code": "69200" }
+  ]
