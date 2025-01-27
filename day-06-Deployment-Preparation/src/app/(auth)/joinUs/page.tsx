@@ -169,7 +169,7 @@ router.push('/')
               <input
                 name="date"
                 type="date"
-                value={input.date || ""}
+                value={input.date}
                 onChange={handlefields}
                 required
                 placeholder="dd/mm/yyyy"
@@ -209,7 +209,7 @@ router.push('/')
             </div>
           </div> */}
           <div className="flex justify-between items-center">
-            <div className="sm:flex items-stretch gap-2  hidden">
+            <div className="flex items-stretch gap-2">
               <input
                 type="checkbox"
                 checked={checked}
