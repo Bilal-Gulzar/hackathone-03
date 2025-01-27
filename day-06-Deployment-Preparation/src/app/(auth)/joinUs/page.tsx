@@ -19,6 +19,15 @@ const [disabledbtn, setDisabledbtn] = useState<boolean>(false)
    });
 
 
+    useEffect(() => {
+      // Get the current date in YYYY-MM-DD format
+      const currentDate = new Date().toISOString().split("T")[0];
+      setInput((prevInput)=>({
+        ...prevInput,
+        date:currentDate
+      }));
+    }, []);
+
 
   useEffect(() => {
     if (!input.country && countriesData.length > 0) {
