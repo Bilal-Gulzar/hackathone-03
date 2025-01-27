@@ -22,6 +22,10 @@ export default function WishList() {
     
   return (
     <div className=" mx-5 lg:container lg:mx-auto mt-5">
+      {wishlist?.length > 0 &&
+      <div className="text-3xl mb-4 lg:mt-0 mt-9 font-medium bg-100 py-3 tracking-wider  text-center">
+        Wishlist
+      </div>}
       {wishlist?.length == 0 && (
         <div className="gap-3 flex-col flex items-center my-40">
           <div>
@@ -38,58 +42,58 @@ export default function WishList() {
           </div>
         </div>
       )}
-      {wishlist?.length > 0 &&
-      <div className="grid grid-cols-2 sm:grid-cols-3  pt-10 pb-20 lg:grid-cols-4 gap-x-3 gap-y-10">
-        {reversedwishlist &&
-          reversedwishlist.length > 0 &&
-          reversedwishlist.map((item: products,index:number) => (
-            <div key={index}>
-              <div className="flex sm:flex-row flex-col gap-4">
-                <div>
-                  <Link
-                    href={`/allProducts/${item._id}`}
-                    className="bg-500 w-full"
-                  >
-                    <Image
-                      src={urlFor(item.image).url()}
-                      width={300}
-                      height={300}
-                      alt={item.productName}
-                    />
-                  </Link>
-                  <div className="font-[500] flex flex-col gap-2.5 pe-2 mt-6 justify-between text-[15px]">
-                    <div className="text-[#9E3500]">{item.status}</div>
-                    <div className="line-clamp-1">{item.productName}</div>
-                  </div>
-                  <div className="font-[500] text-[#757575] space-y-0.5 text-[15px] mt-1.5">
-                    <div className="line-clamp-1">{item.category}</div>
-                    <div>{item.colors?.length} Colour </div>
-                    <div className="flex text-sm tracking-wide items-center justify-between relative">
-                      <span
-                        onClick={() => removeFromWishlist(item._id)}
-                        className="sm:flex hidden gap-1 items-center cursor-pointer"
-                      >
-                        <WishlistHeart />
-                        Remove
-                      </span>
-                      <span
-                        onClick={() => removeFromWishlist(item._id)}
-                        className=" sm:hidden flex flex-wrap pr-1 gap-1 items-center cursor-pointer"
-                      >
-                        <WishlistHeart />
-                        Remove
-                      </span>
+      {wishlist?.length > 0 && (
+        <div className="grid grid-cols-2 sm:grid-cols-3  pt-10 pb-20 lg:grid-cols-4 gap-x-3 gap-y-10">
+          {reversedwishlist &&
+            reversedwishlist.length > 0 &&
+            reversedwishlist.map((item: products, index: number) => (
+              <div key={index}>
+                <div className="flex sm:flex-row flex-col gap-4">
+                  <div>
+                    <Link
+                      href={`/allProducts/${item._id}`}
+                      className="bg-500 w-full"
+                    >
+                      <Image
+                        src={urlFor(item.image).url()}
+                        width={300}
+                        height={300}
+                        alt={item.productName}
+                      />
+                    </Link>
+                    <div className="font-[500] flex flex-col gap-2.5 pe-2 mt-6 justify-between text-[15px]">
+                      <div className="text-[#9E3500]">{item.status}</div>
+                      <div className="line-clamp-1">{item.productName}</div>
                     </div>
-                  </div>
-                  <div className=" mt-4">
-                    <div className="line-clamp-1"> MRP : ₹ {item.price}</div>
+                    <div className="font-[500] text-[#757575] space-y-0.5 text-[15px] mt-1.5">
+                      <div className="line-clamp-1">{item.category}</div>
+                      <div>{item.colors?.length} Colour </div>
+                      <div className="flex text-sm tracking-wide items-center justify-between relative">
+                        <span
+                          onClick={() => removeFromWishlist(item._id)}
+                          className="sm:flex hidden gap-1 items-center cursor-pointer"
+                        >
+                          <WishlistHeart />
+                          Remove
+                        </span>
+                        <span
+                          onClick={() => removeFromWishlist(item._id)}
+                          className=" sm:hidden flex flex-wrap pr-1 gap-1 items-center cursor-pointer"
+                        >
+                          <WishlistHeart />
+                          Remove
+                        </span>
+                      </div>
+                    </div>
+                    <div className=" mt-4">
+                      <div className="line-clamp-1"> MRP : ₹ {item.price}</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-      </div>
-     }
+            ))}
+        </div>
+      )}
     </div>
   );
 }
