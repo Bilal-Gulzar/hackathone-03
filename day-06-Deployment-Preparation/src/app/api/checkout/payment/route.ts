@@ -16,19 +16,21 @@ export const POST = async (req:NextRequest) => {
       shippingAddress: address,
       postalCode: postalCode,
       city: city,
-      orderItems: shoppingCart.map((item: products) => ({
+       orderItems: shoppingCart.map((item: products) => ({
         productName: item.productName,
         description: item.description,
         color: item.color,
         id: item._id,
         category: item.category,
-        image:item.image.asset._ref ? {
-                _type: "image",
-                asset: {
-                  _type: "reference",
-                  _ref: item.image.asset._ref,
-                },
-              } : null,
+        image: item.image.asset._ref
+          ? {
+              _type: "image",
+              asset: {
+                _type: "reference",
+                _ref: item.image.asset._ref,
+              },
+            }
+          : null,
         quantity: item.qty || 1,
         price: item.price || 0,
       })),

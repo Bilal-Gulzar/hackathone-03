@@ -48,7 +48,7 @@ export const orderSchema = {
           type: "object",
           fields: [
             {
-              name: "Name",
+              name: "productName",
               title: "ProductName",
               type: "string",
             },
